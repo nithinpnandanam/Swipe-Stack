@@ -1,8 +1,10 @@
+import RouterContainer from "./router/RouterContainer"
+
 const App = () =>{
   return(
-    <div>
-      <p>App</p>
-    </div>
+    <>
+      <RouterContainer/>
+    </>
   )
 }
 
