@@ -4,11 +4,15 @@ import Login from "@/pages/LogIn/Login";
 import SignUp from "@/pages/SignUp/SignUp";
 import PrivateRoute from "./PrivateRoute/PrivayeRoute";
 import Layout from "@/componets/Layout/Layout";
-
-const RouterContainer = () => {
+import { FC, ReactNode } from "react";
+type RouterContainerProps = {
+  children: ReactNode;
+};
+const RouterContainer: FC<RouterContainerProps> = ({ children }) => {
   return (
     <>
       <BrowserRouter>
+        {children}
         <Routes>
           <Route path={paths.LOGIN} element={<Login />}></Route>
           <Route path={paths.SIGN_UP} element={<SignUp />}></Route>

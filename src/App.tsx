@@ -1,9 +1,12 @@
-import RouterContainer from "./router/RouterContainer"
+import NavigationRegistrar from "@/componets/NavigationRegistrar/NavigationRegistrar"
+import RouterContainer from "@//router/RouterContainer"
 
 const App = () =>{
   return(
     <>
-      <RouterContainer/>
+      <RouterContainer>
+        <NavigationRegistrar/>
+      </RouterContainer>
     </>
   )
 }
