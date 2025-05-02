@@ -1,4 +1,4 @@
-import { setNavigator } from "@/utils/navigationHelper"
+import { setNavigator } from "@/utils/navigationUtils"
 import { useEffect } from "react"
 import { useNavigate } from "react-router"
 
