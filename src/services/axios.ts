@@ -1,6 +1,6 @@
-import paths from "@/router/routes";
+// import paths from "@/router/routes";
 import { getAccessToken } from "@/utils/authUtils";
-import { navigateTo } from "@/utils/navigationUtils";
+// import { navigateTo } from "@/utils/navigationUtils";
 import axios from "axios";
 
 const axiosClient = axios.create({

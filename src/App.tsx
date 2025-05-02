@@ -1,14 +1,17 @@
-import NavigationRegistrar from "@/componets/NavigationRegistrar/NavigationRegistrar"
-import RouterContainer from "@//router/RouterContainer"
+import NavigationRegistrar from "@/componets/NavigationRegistrar/NavigationRegistrar";
+import RouterContainer from "@/router/RouterContainer";
+import { AuthProvider } from "@/context/AuthContext/AuthContext";
 
-const App = () =>{
-  return(
+const App = () => {
+  return (
     <>
-      <RouterContainer>
-        <NavigationRegistrar/>
-      </RouterContainer>
+      <AuthProvider>
+        <RouterContainer>
+          <NavigationRegistrar />
+        </RouterContainer>
+      </AuthProvider>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
