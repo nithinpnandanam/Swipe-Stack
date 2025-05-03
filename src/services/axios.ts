@@ -4,10 +4,11 @@ import { getAccessToken } from "@/utils/authUtils";
 import axios from "axios";
 
 const axiosClient = axios.create({
-  baseURL: "https://dummyjson.com/",
+  baseURL: "http://localhost:7777/",
   headers: {
     "Content-type": "application/json",
   },
+  withCredentials: true,
 });
 
 axiosClient.interceptors.request.use(
