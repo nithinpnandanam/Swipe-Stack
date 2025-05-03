@@ -1,0 +1,25 @@
+.login-container-outer{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-container-inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+}
+.email-pass-container{
+    display: flex;
+    flex-direction: column;
+    width: 370px;
+}
+.login-email{
+    margin: 1rem 0rem !important;
+}
+.login-password{
+    margin-bottom: 3rem !important ;
+}
