@@ -1,14 +1,17 @@
 import NavigationRegistrar from "@/componets/NavigationRegistrar/NavigationRegistrar";
 import RouterContainer from "@/router/RouterContainer";
 import { AuthProvider } from "@/context/AuthContext/AuthContext";
+import { ThemesProvider } from "@/componets/Theme/Theme";
 
 const App = () => {
   return (
     <>
       <AuthProvider>
-        <RouterContainer>
-          <NavigationRegistrar />
-        </RouterContainer>
+        <ThemesProvider>
+          <RouterContainer>
+            <NavigationRegistrar />
+          </RouterContainer>
+        </ThemesProvider>
       </AuthProvider>
     </>
   );
