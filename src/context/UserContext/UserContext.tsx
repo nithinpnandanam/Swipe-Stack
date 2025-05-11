@@ -1,6 +1,6 @@
 import { createContext, FC, ReactNode, useContext, useState } from "react";
 type UserContextType = {
-  setLoggedInUser: (data: loggedInUserType) => void;
+  setLoggedInUser: (data: loggedInUserType | null) => void;
   loggedInUser:loggedInUserType | null
 };
 

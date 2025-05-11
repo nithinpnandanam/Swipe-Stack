@@ -13,6 +13,9 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { useState } from "react";
+import { userLogout } from "@/api/logout.api";
+import { useNavigate } from "react-router";
+import paths from "@/router/routes";
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -20,7 +23,8 @@ const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 const Header = () =>{
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
-
+  const navigate = useNavigate()
+  const {setLoggedInUser} = useUserContext()
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -36,6 +40,31 @@ const Header = () =>{
     setAnchorElUser(null);
   };
 
+  const handleLogout = async()=>{
+    try{
+      await userLogout()
+      navigate(paths.LOGIN)
+      setLoggedInUser(null)
+      
+    }catch(e){
+      console.log("Error",e)
+    }
+  }
+  const actionMap: Record<string, () => void> = {
+    Logout: handleLogout,
+  };
+
+  const handleMenuItemClick = (setting: string) => {
+    handleCloseUserMenu();
+    const action = actionMap[setting];
+    if (action) {
+      action();
+    } else {
+      console.warn(`No action defined for ${setting}`);
+    }
+  };
+
+  
   const {loggedInUser} = useUserContext()
   return (
     <AppBar position="static">
@@ -147,9 +176,9 @@ const Header = () =>{
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography sx={{ textAlign: 'center' }}>{setting}</Typography>
-                </MenuItem>
+                <MenuItem key={setting} onClick={() => handleMenuItemClick(setting)}>
+                <Typography>{setting}</Typography>
+              </MenuItem>
               ))}
             </Menu>
           </Box>
