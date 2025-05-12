@@ -1,5 +1,6 @@
 export const endPoints = {
     LOGIN : "/login",
-    LOGOUT :"/logout"
+    LOGOUT :"/logout",
+    FEED :"/feed"
   } 
   

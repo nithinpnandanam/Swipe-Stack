@@ -5,6 +5,7 @@ import SignUp from "@/pages/SignUp/SignUp";
 import PrivateRoute from "./PrivateRoute/PrivayeRoute";
 import Layout from "@/componets/Layout/Layout";
 import { FC, ReactNode } from "react";
+import Feed from "@/componets/Feed/Feed";
 type RouterContainerProps = {
   children: ReactNode;
 };
@@ -17,7 +18,9 @@ const RouterContainer: FC<RouterContainerProps> = ({ children }) => {
           <Route path={paths.LOGIN} element={<Login />}></Route>
           <Route path={paths.SIGN_UP} element={<SignUp />}></Route>
           <Route element={<PrivateRoute />}>
-            <Route path={paths.ROOT_PATH} element={<Layout />}></Route>
+            <Route path={paths.ROOT_PATH} element={<Layout />}>
+              <Route index element={<Feed />} />
+            </Route>
           </Route>
         </Routes>
       </BrowserRouter>

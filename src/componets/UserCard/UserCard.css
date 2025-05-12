@@ -1,0 +1,32 @@
+.user-card-container{
+    width: 400px;
+    transition: transform .5s,box-shadow 0.5s  !important;
+      /* transition: "transform 0.2s" */
+      /* 0.2s means the transition will last 0.2 seconds. */
+    .user-card{
+        cursor: pointer;   
+    }
+    
+}
+
+.user-card-container:hover {
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.3) -6px -2px 16px 0px;
+    transform: scale(1.01);
+  }
+
+
+  /* transform: scale(1.01); */
+  /* Slightly enlarges the card when hovered. */
+  /* scale(1.01) means scale to 101% of original size — a gentle zoom-in effect. */
+  /* Combined with transition, it gives a subtle “lift” effect when you hover over the card. */
+
+  
+.status-btn-container{
+    display: flex;
+    padding-top: 1rem;
+    justify-content: end;
+    .interest-btn{
+        margin-left: 1rem !important;
+    }
+}
+
