@@ -18,7 +18,7 @@ import { useNavigate } from "react-router";
 import paths from "@/router/routes";
 
 const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const settings = ['Profile', 'Account', 'Dashboard','Edit Profile','Logout'];
 
 const Header = () =>{
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
@@ -50,8 +50,13 @@ const Header = () =>{
       console.log("Error",e)
     }
   }
+
+  const handleEditProfile = () =>{
+    navigate(paths.EDIT_PROFILE)
+  }
   const actionMap: Record<string, () => void> = {
     Logout: handleLogout,
+    'Edit Profile':handleEditProfile
   };
 
   const handleMenuItemClick = (setting: string) => {

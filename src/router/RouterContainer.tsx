@@ -6,6 +6,7 @@ import PrivateRoute from "./PrivateRoute/PrivayeRoute";
 import Layout from "@/componets/Layout/Layout";
 import { FC, ReactNode } from "react";
 import Feed from "@/componets/Feed/Feed";
+import EditProfile from "@/componets/EditProfile/EditProfile";
 type RouterContainerProps = {
   children: ReactNode;
 };
@@ -20,6 +21,7 @@ const RouterContainer: FC<RouterContainerProps> = ({ children }) => {
           <Route element={<PrivateRoute />}>
             <Route path={paths.ROOT_PATH} element={<Layout />}>
               <Route index element={<Feed />} />
+              <Route path={paths.EDIT_PROFILE} element={<EditProfile/>}/>
             </Route>
           </Route>
         </Routes>
