@@ -1,0 +1,7 @@
+.feed-container{
+    display: flex;
+    margin-top: 2rem;
+    border: 2px solid white;
+    column-gap: 3rem;
+    padding: 1rem;
+}
