@@ -1,4 +1,4 @@
-import { endPoints } from "@/constants/enpoints";
+import { endPoints } from "@/constants/endpoints";
 import axiosClient from "@/services/axios";
 
 type loginDataTypes = {

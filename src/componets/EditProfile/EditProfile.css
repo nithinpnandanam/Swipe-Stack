@@ -1,0 +1,34 @@
+.edit-profile-container-outer{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.edit-profile-container-inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+}
+.edit-profile-container{
+    display: flex;
+    flex-direction: column;
+    width: 370px;
+}
+.edit-profile{
+    margin-bottom: 3rem !important ;
+}
+.edit-gender,.edit-photourl,.edit-about{
+    margin-bottom: 1rem !important;
+}
+/* .edit-photourl{
+    margin-bottom: 1rem !important;
+}
+.edit-about{
+    margin-bottom: 1rem !important;
+} */
+/* .edit-skills{
+    margin-bottom: 3rem !important ;
+} */

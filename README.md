@@ -9,3 +9,7 @@ const actionMap: Record<string, () => void> = {
 ```
 * even if Logout is not in quotes js internally converts it into quotes
 ---
+* Refer Feed.css to know about transition and transform
+---
+* Refer EditProfile.tsx for the use of ```as in TS```
+---

@@ -10,7 +10,6 @@ const Feed = () => {
     const _userFeed = async () => {
       try {
         const feedData = await userFeed();
-        console.log(feedData.data.data);
         setFeedData(feedData.data.data);
       } catch (e) {
         console.log(e);
