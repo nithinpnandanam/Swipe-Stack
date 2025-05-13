@@ -11,3 +11,5 @@ const actionMap: Record<string, () => void> = {
 ---
 * Refer Feed.css to know about transition and transform
 ---
+* Refer EditProfile.tsx for the use of ```as in TS```
+---

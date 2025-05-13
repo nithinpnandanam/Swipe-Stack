@@ -5,3 +5,5 @@ export type FeedUser = {
   about: string;
   skills: string[];
 };
+
+export type Gender = "male" | "female" | "others";

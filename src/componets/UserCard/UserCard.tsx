@@ -5,6 +5,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import CardActionArea from "@mui/material/CardActionArea";
+
 import "./UserCard.css";
 import { Box, Button } from "@mui/material";
 const UserCard: FC<FeedUser> = ({ firstName, emailId, photUrl, about }) => {

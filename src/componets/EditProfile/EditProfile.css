@@ -17,9 +17,18 @@
     flex-direction: column;
     width: 370px;
 }
-.login-email{
-    margin: 1rem 0rem !important;
-}
-.login-password{
+.edit-profile{
     margin-bottom: 3rem !important ;
 }
+.edit-gender,.edit-photourl,.edit-about{
+    margin-bottom: 1rem !important;
+}
+/* .edit-photourl{
+    margin-bottom: 1rem !important;
+}
+.edit-about{
+    margin-bottom: 1rem !important;
+} */
+/* .edit-skills{
+    margin-bottom: 3rem !important ;
+} */
