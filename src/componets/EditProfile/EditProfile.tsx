@@ -69,19 +69,13 @@ const EditProfile = () => {
               value={about}
               onChange={(e) => setAbout(e.target.value)}
             />
-            {/* <TextField
-              className="edit-skills"
-              label="Skills"
-              variant="outlined"
-              value={skills}
-              onChange={(e) => setSkills(e.target.value)}
-            /> */}
             <SkillChips/>
             <Button variant="contained" onClick={handleEdit}>
               Save Edit
             </Button>
           </Box>
         </Box>
+        
       </Box>
     </>
   );
